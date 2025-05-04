@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Disallow: /2WVgvkUPu8ka-flag.txt

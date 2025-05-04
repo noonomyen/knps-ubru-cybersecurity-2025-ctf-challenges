@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-center text-gray-800">Profile</h2>
+            <div id="profileContent" class="space-y-4">
+                <p class="text-center text-gray-600">Loading profile...</p>
+            </div>
+            <button id="logoutButton"
+                class="w-full px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300">
+                Logout
+            </button>
+        </div>
+    </div>
+
+    <script>
+        async function fetchProfile() {
+            try {
+                const response = await fetch("api/profile", { method: "GET" });
+                if (response.status === 200) {
+                    const data = await response.json();
+                    if (data.status === "OK" && data.user) {
+                        const { user_id, username, description } = data.user;
+                        document.getElementById("profileContent").innerHTML = `
+                            <p><strong>User ID:</strong> ${user_id}</p>
+                            <p><strong>Username:</strong> ${username}</p>
+                            <p><strong>Description:</strong> ${description}</p>
+                        `;
+                    }
+                } else {
+                    document.getElementById("profileContent").innerHTML = `
+                        <p class="text-center text-red-500">Failed to load profile.</p>
+                    `;
+                }
+            } catch (error) {
+                console.error("Error fetching profile:", error);
+                document.getElementById("profileContent").innerHTML = `
+                    <p class="text-center text-red-500">An error occurred.</p>
+                `;
+            }
+        }
+
+        document.getElementById("logoutButton").addEventListener("click", () => {
+            fetch("api/logout", { method: "POST" }).then(() => {
+                window.location.href = "login";
+            });
+        });
+
+        fetchProfile();
+    </script>
+    <script>
+        fetch("api/session", { method: "GET" }).then(response => {
+            if (response.status === 401) window.location.href = "login";
+        })
+    </script>
+</body>
+</html>

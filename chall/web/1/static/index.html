@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cloud Status - Unavailable</title>
+        <style>
+            :root {
+                --bg: #0f172a;
+                --card-bg: #1e293b;
+                --text: #f1f5f9;
+                --accent: #ef4444;
+                --radius: 1rem;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: var(--bg);
+                color: var(--text);
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                padding: 1rem;
+            }
+
+            .card {
+                background-color: var(--card-bg);
+                padding: 2rem;
+                border-radius: var(--radius);
+                max-width: 800px;
+                width: 100%;
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+                animation: floatIn 0.6s ease-out;
+            }
+
+            .card img {
+                width: 120px;
+                flex-shrink: 0;
+                opacity: 0.95;
+            }
+
+            .card-content {
+                flex: 1;
+            }
+
+            .card-content h1 {
+                font-size: 2rem;
+                color: var(--accent);
+                margin-bottom: 1rem;
+            }
+
+            .card-content p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            @keyframes floatIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            footer {
+                position: absolute;
+                bottom: 1rem;
+                font-size: 0.75rem;
+                color: #64748b;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <img src="images/server.png" alt="Server Icon" />
+            <div class="card-content">
+                <h1>Cloud Service Offline</h1>
+                <p>
+                    Our cloud system is currently
+                    <strong>unavailable</strong> due to a ransomware incident.
+                </p>
+                <p>
+                    We are actively investigating and working to restore full
+                    functionality.
+                </p>
+                <!-- Flag: web{7h15_15_c4745720ph1c} -->
+            </div>
+        </div>
+
+        <footer>&copy; 2025 Fake Cloud Inc.</footer>
+    </body>
+</html>

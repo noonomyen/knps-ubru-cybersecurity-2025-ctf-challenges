@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-6">Menu</h1>
+        <div class="mb-4">
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search menu..."
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+        </div>
+        <ul id="menuList" class="space-y-4"></ul>
+    </div>
+
+    <script>
+        async function fetchMenu(search = '') {
+            const response = await fetch(`api/menu${search ? '?search=' + search : ''}`);
+            const data = await response.json();
+            if (data.status === "OK") {
+                return data.menu;
+            }
+            return [];
+        }
+
+        function renderMenu(menu) {
+            const menuList = document.getElementById('menuList');
+            menuList.innerHTML = '';
+            menu.forEach(item => {
+                const menuItem = document.createElement('li');
+                menuItem.className = 'bg-white p-4 rounded-lg shadow-md';
+                menuItem.innerHTML = `
+                    <h2 class="text-xl font-semibold">${item.name}</h2>
+                    <p class="text-gray-600">${item.description}</p>
+                    <p class="text-blue-500 font-bold mt-2">$${item.price.toFixed(2)}</p>
+                `;
+                menuList.appendChild(menuItem);
+            });
+        }
+
+        async function loadMenu(search = '') {
+            const menu = await fetchMenu(search);
+            renderMenu(menu);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            loadMenu(e.target.value);
+        });
+
+        loadMenu();
+    </script>
+</body>
+</html>

@@ -44,7 +44,7 @@ serve({
         "/": () => Response.redirect("login", 302),
         "/api/session": {
             GET: async (req) => {
-                const sessionId = req.cookies.get("session")
+                const sessionId = req.cookies.get("ecw3-session")
                 if (!sessionId) return new Response("Unauthorized", { status: 401 })
 
                 const session = db.query("SELECT 1 FROM session WHERE session_id = ?").get(sessionId)
@@ -64,25 +64,25 @@ serve({
                 const sessionId = randomUUIDv7()
                 db.query("INSERT INTO session (session_id, user_id) VALUES (?, ?)").run(sessionId, user.user_id)
 
-                req.cookies.set("session", sessionId)
+                req.cookies.set("ecw3-session", sessionId)
 
                 return Response.json({ status: "OK", redirect: "profile" }, { status: 200 })
             }
         },
         "/api/logout": {
             POST: async (req) => {
-                const sessionId = req.cookies.get("session")
+                const sessionId = req.cookies.get("ecw3-session")
                 if (!sessionId) return new Response("Unauthorized", { status: 401 })
 
                 db.query("DELETE FROM session WHERE session_id = ?").run(sessionId)
-                req.cookies.delete("session")
+                req.cookies.delete("ecw3-session")
 
                 return Response.json({ status: "OK", redirect: "login" }, { status: 200 })
             }
         },
         "/api/profile": {
             GET: async (req) => {
-                const sessionId = req.cookies.get("session")
+                const sessionId = req.cookies.get("ecw3-session")
                 if (!sessionId) return new Response("Unauthorized", { status: 401 })
 
                 const user = db.query(`

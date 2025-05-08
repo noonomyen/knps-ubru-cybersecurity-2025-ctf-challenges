@@ -1,2 +1,1 @@
-[serve.static]
-plugins = ["bun-plugin-tailwind"]
+../base.3-4-5/bunfig.toml

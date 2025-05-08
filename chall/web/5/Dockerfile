@@ -1,10 +1,8 @@
-FROM oven/bun:1.2.10
-
-COPY . /app
+FROM scc-web-chall-bun-base:latest
 
 WORKDIR /app
 
-RUN bun install
+COPY . .
 
 RUN bun run build
 

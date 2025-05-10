@@ -32,10 +32,10 @@
 
 You demonstrated cracking the Wi-Fi password of a household to show that using a phone number as a password is insecure, as you're confident the password is a Thai personal phone number.
 
-To speed up the process, the prefix of the number is `09`.
+To speed up the process, the prefix of the number is `091`.
 
 คุณได้ทำการแสดง crack password wifi บ้านหลังหนึ่ง เพื่อให้เห็นว่า การใช้เบอร์เป็น password นั้นไม่ปลอดภัย โดยคุณมั่นใจว่า password คือเบอร์โทร (เลขเบอร์โทรส่วนบุคคลในประเทศไทย)
 
-เพื่อความรวมเร็ว prefix เบอร์คือ `09`
+เพื่อความรวมเร็ว prefix เบอร์คือ `091`
 
 `net{0912345678}`

@@ -18,8 +18,7 @@ services:
     depends_on:
       - db
     networks:
-        default:
-        internal:
+      ctfd_internal:
 
   nginx:
     image: nginx:stable
@@ -28,8 +27,13 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
+      - 8011:8011
     depends_on:
       - ctfd
+    networks:
+      default:
+      ctfd_internal:
+      chall_internal:
 
   db:
     image: mariadb:10.11
@@ -43,7 +47,7 @@ services:
     volumes:
       - .data/mysql:/var/lib/mysql
     networks:
-        internal:
+      ctfd_internal:
     command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800, --log-warnings=0]
 
   cache:
@@ -52,7 +56,7 @@ services:
     volumes:
     - .data/redis:/data
     networks:
-        internal:
+      ctfd_internal:
 
   chall_web_1:
     build: ../chall/web/1
@@ -60,7 +64,7 @@ services:
     ports:
       - 8001:80
     networks:
-        default:
+      default:
 
   chall_web_2:
     build: ../chall/web/2
@@ -68,7 +72,7 @@ services:
     ports:
       - 8002:80
     networks:
-        default:
+      default:
 
   chall_web_3:
     build: ../chall/web/3
@@ -76,7 +80,7 @@ services:
     ports:
       - 8003:8080
     networks:
-        default:
+      default:
 
   chall_web_4:
     build: ../chall/web/4
@@ -84,7 +88,7 @@ services:
     ports:
       - 8004:8080
     networks:
-        default:
+      default:
 
   chall_web_5:
     build: ../chall/web/5
@@ -92,9 +96,17 @@ services:
     ports:
       - 8005:8080
     networks:
-        default:
+      default:
+
+  chall_prog_hu1:
+    build: ../chall/prog/hu1
+    restart: always
+    networks:
+      chall_internal:
 
 networks:
     default:
-    internal:
-        internal: true
+    ctfd_internal:
+      internal: true
+    chall_internal:
+      internal: true

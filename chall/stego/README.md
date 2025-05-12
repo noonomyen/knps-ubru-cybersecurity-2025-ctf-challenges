@@ -39,6 +39,8 @@ exiftool -Comment="stego{m374d474}" -o stego-4.png ../assets/image.png
 pdflatex ./pdf.tex
 ```
 
+flag will not use spaces. If found, replace them with an underscore (_).
+
 `stego{813nd1n9_1n_huh}`
 
 ## 6 [Medium]

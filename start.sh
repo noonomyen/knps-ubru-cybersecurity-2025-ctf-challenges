@@ -2,13 +2,13 @@
 
 set -e
 
-if ! docker image inspect "scc-web-chall-bun-base:latest" >/dev/null 2>&1; then
-    echo "Image scc-web-chall-bun-base:latest not found. Running build.sh..."
-    cd ./chall/web/base.3-4-5
+if ! docker image inspect "scc-bun-web-base:latest" >/dev/null 2>&1; then
+    echo "Image scc-bun-web-base:latest not found. Running build.sh..."
+    cd ./chall/_assets/bun-web-base
     ./build.sh
     cd ../../../
 else
-    echo "Image scc-web-chall-bun-base:latest already exists."
+    echo "Image scc-bun-web-base:latest already exists."
 fi
 
 cd ctfd

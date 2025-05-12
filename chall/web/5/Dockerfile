@@ -1,4 +1,4 @@
-FROM scc-web-chall-bun-base:latest
+FROM scc-bun-web-base:latest
 
 WORKDIR /app
 

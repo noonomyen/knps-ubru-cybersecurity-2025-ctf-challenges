@@ -57,30 +57,40 @@ services:
   chall_web_1:
     build: ../chall/web/1
     restart: always
+    ports:
+      - 8001:80
     networks:
         default:
 
   chall_web_2:
     build: ../chall/web/2
     restart: always
+    ports:
+      - 8002:80
     networks:
         default:
 
   chall_web_3:
     build: ../chall/web/3
     restart: always
+    ports:
+      - 8003:8080
     networks:
         default:
 
   chall_web_4:
     build: ../chall/web/4
     restart: always
+    ports:
+      - 8004:8080
     networks:
         default:
 
   chall_web_5:
     build: ../chall/web/5
     restart: always
+    ports:
+      - 8005:8080
     networks:
         default:
 

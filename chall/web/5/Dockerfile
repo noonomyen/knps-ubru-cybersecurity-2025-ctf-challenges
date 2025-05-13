@@ -6,4 +6,4 @@ COPY . .
 
 RUN bun run build
 
-CMD ["bun", "start"]
+CMD ["bun", "start:cluster"]

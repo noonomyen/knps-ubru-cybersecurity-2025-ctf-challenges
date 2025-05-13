@@ -40,6 +40,7 @@ serve({
     port: PORT,
     hostname: HOST,
     development: false,
+    reusePort: true,
     routes: {
         "/": () => Response.redirect("login", 302),
         "/api/session": {

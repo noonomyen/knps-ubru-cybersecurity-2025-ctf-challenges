@@ -11,7 +11,8 @@
   "scripts": {
     "build": "bun x tailwindcss --input ./tailwind.css --output ./dist/tailwind.css && bun build ./app.ts --outdir ./dist --target bun",
     "dev": "bun run --watch ./app.ts",
-    "start": "bun run ./dist/app.js"
+    "start": "bun run ./dist/app.js",
+    "start:cluster": "bun run ./cluster.ts"
   },
   "type": "module",
   "dependencies": {

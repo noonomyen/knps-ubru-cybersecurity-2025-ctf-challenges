@@ -7,14 +7,15 @@ services:
       - UPLOAD_FOLDER=/var/uploads
       - DATABASE_URL=mysql+pymysql://ctfd:ctfd@db/ctfd
       - REDIS_URL=redis://cache:6379
-      - WORKERS=1
+      - WORKERS=4
       - LOG_FOLDER=/var/log/CTFd
       - ACCESS_LOG=-
       - ERROR_LOG=-
       - REVERSE_PROXY=true
+      - SECRET_KEY=nYJduG6M5V0gekK4Aw8W68loYC8CG6rA
     volumes:
-      - .data/CTFd/logs:/var/log/CTFd
-      - .data/CTFd/uploads:/var/uploads
+      - ./data/CTFd/logs:/var/log/CTFd
+      - ./data/CTFd/uploads:/var/uploads
     depends_on:
       - db
     networks:
@@ -27,6 +28,7 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
+      - 8000:8000
       - 8011:8011
     depends_on:
       - ctfd
@@ -45,7 +47,7 @@ services:
       - MARIADB_DATABASE=ctfd
       - MARIADB_AUTO_UPGRADE=1
     volumes:
-      - .data/mysql:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
     networks:
       ctfd_internal:
     command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800, --log-warnings=0]
@@ -54,9 +56,19 @@ services:
     image: redis:4
     restart: always
     volumes:
-    - .data/redis:/data
+    - ./data/redis:/data
     networks:
       ctfd_internal:
+
+  apt_cache_ng:
+    image: sameersbn/apt-cacher-ng:latest
+    restart: always
+    volumes:
+      - ./data/apt-cache-ng:/var/cache/apt-cacher-ng
+    ports:
+      - 3142:3142
+    networks:
+      default:
 
   chall_web_1:
     build: ../chall/web/1

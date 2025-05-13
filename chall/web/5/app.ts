@@ -45,6 +45,7 @@ serve({
     port: PORT,
     hostname: HOST,
     development: false,
+    reusePort: true,
     routes: {
         "/": () => Response.redirect("menu", 302),
         "/api/menu": {

@@ -39,13 +39,21 @@ ROT13
 
 ## 7 [Medium]
 
+Zip
+
+pass: `banana123`
+
+`crypto{175_ju57_7h47_84n4n4}`
+
+## 8 [Medium]
+
 XOR Cipher
 
 key: `U`
 
 `crypto{175_4_p20p327y_0f_x02}`
 
-## 8 [Medium]
+## 9 [Medium]
 
 Reverse
 Base32
@@ -55,14 +63,14 @@ Base64
 
 `crypto{mu171p13_14y325}`
 
-## 9 [Medium]
+## 10 [Medium]
 
 XOR Cipher (Find key)
 
 key: `4920616d20746865206b6579` `I am the key`
 flag: `crypto{8u7_1_4m_7h3_f149}`
 
-## 10 [Medium]
+## 11 [Medium]
 
 Vigenere Cipher (Find Key)
 
@@ -70,14 +78,14 @@ key: `easy`
 
 `crypto{n07_7h47_much}`
 
-## 11 [Hard]
+## 12 [Hard]
 
 Caesar Cipher (Shift) emoji
 
 shift: `128471`
 flag: `crypto{7h3_5h1f7_15_700_14293}`
 
-## 12 [Hard]
+## 13 [Hard]
 
 md5
 

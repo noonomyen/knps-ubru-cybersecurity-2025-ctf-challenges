@@ -39,7 +39,9 @@ ROT13
 
 ## 7 [Medium]
 
-Zip
+It’s encrypted with a simple password. Try using /usr/share/wordlists/rockyou.txt.
+
+มันถูกเข้ารหัสไว้ด้วย password ง่ายๆ ลองใช้ `/usr/share/wordlists/rockyou.txt` ดูสิ
 
 pass: `banana123`
 

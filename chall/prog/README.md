@@ -44,7 +44,7 @@ Your teacher assigned you homework that requires connecting to a socket to solve
 
 `prog{7h15_m47h_700_f457!!@}`
 
-## ?? [Medium]
+## 7 [Medium]
 
 There is an encrypted message we want to decrypt, but it was encoded in a non-reversible way because the seed wasn't saved. We do have the source code of the program that was used for encryption, which seems to have a vulnerability. What we also know is that the encryption date was 12-13 05/2025, but we don't have the exact time. Can you help decrypt it?
 
@@ -52,7 +52,7 @@ There is an encrypted message we want to decrypt, but it was encoded in a non-re
 
 `prog{45_71m3_9035_8y_p30p13_1n3v17481y_ch4n93}`
 
-## ?? [Hard]
+## 8 [Hard]
 
 There is a game server that the creator must have thought of something weird. It was built for a bot to play, not a human. So if you want to play this game, you have to create a bot to play. The game works like this: when you connect to the server via TCP, the server will explain how to play as follows:
 
@@ -82,7 +82,7 @@ You have one job:
 Build a tool. Beat the CAPTCHA. Steal the code.
 You’ve got 3 seconds per try — no retries, no mercy.
 
-
 You are not just solving a challenge.
 You are saving what’s left of the human race — one blurry text box at a time.
+
 `flag: prog{1d3n717y_v3r1f13d_y0u_4r3_hum4n!}`

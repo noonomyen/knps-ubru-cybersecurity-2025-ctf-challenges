@@ -111,13 +111,16 @@ services:
       default:
 
   chall_prog_hu1:
-    build: ../chall/prog/hu1
+    build: ../chall/prog/8
     restart: always
+    ports:
+      - 8011:8011
     networks:
-      chall_internal:
+      default:
 
 networks:
     default:
+      driver: bridge
     ctfd_internal:
       internal: true
     chall_internal:

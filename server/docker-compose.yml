@@ -29,7 +29,6 @@ services:
     ports:
       - 80:80
       - 8000:8000
-      - 8011:8011
     depends_on:
       - ctfd
     networks:
@@ -110,9 +109,10 @@ services:
     networks:
       default:
 
-  chall_prog_hu1:
+  chall_prog_8:
     build: ../chall/prog/8
     restart: always
+    stop_signal: SIGINT
     ports:
       - 8011:8011
     networks:

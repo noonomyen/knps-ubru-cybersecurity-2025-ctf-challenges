@@ -14,7 +14,7 @@ if CPUS is None:
 async def async_server(id: int) -> None:
     sock: socket.socket
 
-    if False and socket.has_dualstack_ipv6():
+    if socket.has_dualstack_ipv6():
         sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
         sock.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 0)
     else:
@@ -24,8 +24,10 @@ async def async_server(id: int) -> None:
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 
     sock.bind(("", 8011))
-    sock.listen(100)
     sock.setblocking(False)
+    sock.listen(16)
+
+    print(f"[{id}:{getpid()}] Listening on {sock.getsockname()}")
 
     PID = getpid()
 

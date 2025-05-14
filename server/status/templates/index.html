@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900 text-white font-sans">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Service Status</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body class="min-h-screen p-8">
+        <h1 class="text-3xl font-bold text-blue-400 mb-6">Container Status</h1>
+        <table class="table-auto w-full border border-white text-sm">
+            <thead>
+                <tr class="bg-gray-800">
+                    <th class="px-4 py-2 border">Name</th>
+                    <th class="px-4 py-2 border">Short ID</th>
+                    <th class="px-4 py-2 border">Image</th>
+                    <th class="px-4 py-2 border">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in containers %}
+                <tr>
+                    <td class="px-4 py-2 border font-semibold">{{ c.name }}</td>
+                    <td class="px-4 py-2 border text-gray-400">
+                        {{ c.short_id }}
+                    </td>
+                    <td class="px-4 py-2 border text-green-300">
+                        {{ c.image }}
+                    </td>
+                    <td
+                        class="px-4 py-2 border {% if c.status == 'running' %}text-green-400{% else %}text-red-400{% endif %}"
+                    >
+                        {{ c.status }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

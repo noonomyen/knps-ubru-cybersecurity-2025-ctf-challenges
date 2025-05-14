@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersecurity and CTF</title>
+    <script>
+        function updateCountdown() {
+            const countdownEl = document.getElementById("countdown");
+            const now = new Date();
+            const target = new Date("2025-05-16T08:00:00");
+            const end = new Date("2025-05-16T16:00:00");
+
+            if (now >= end) {
+                countdownEl.textContent = "Ended";
+            } else if (now >= target) {
+                countdownEl.textContent = "Started";
+            } else {
+                const diff = target - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                countdownEl.textContent = `${hours}h ${minutes}m ${seconds}s`;
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        window.onload = updateCountdown;
+    </script>
+    <script>
+        function getDayLabel() {
+            const date = new Date();
+            const day1 = new Date("2025-05-15T00:00:00");
+            const day2 = new Date("2025-05-16T00:00:00");
+            const ended = new Date("2025-05-17T00:00:00");
+
+            console.log(date, day1, day2, ended);
+
+            if (date.getTime() > ended.getTime()) return "Ended";
+            else if (date.getTime() < day1.getTime()) return "Not Started";
+            else if (date.getTime() < day2.getTime()) return "Day 1";
+            else if (date.getTime() < ended.getTime()) return "Day 2";
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById("day-label").textContent = getDayLabel();
+        });
+    </script>
+    <script>
+        function disableCompetitionLink() {
+            const compBtn = document.getElementById("ctfd-competition");
+            compBtn.classList.add("pointer-events-none", "opacity-50", "cursor-not-allowed");
+        }
+        window.onload = () => {
+            updateCountdown();
+            disableCompetitionLink();
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/particles.min.js"></script>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col justify-between px-8 py-10 relative overflow-hidden">
+    <div id="particles-js" class="absolute inset-0 -z-10 opacity-50"></div>
+
+    <div class="w-full flex justify-between items-start">
+        <h1 class="text-5xl font-extrabold text-blue-400 max-w-4xl">
+            ชื่อโครงการ...
+        </h1>
+        <div class="text-xl text-indigo-400 font-semibold" id="day-label"></div>
+    </div>
+
+    <div class="flex flex-col items-start justify-center flex-grow space-y-6">
+        <a href="/_redirect/80/contents/" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded text-lg w-72 text-left">Content Files</a>
+        <a href="/_redirect/8000/" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded text-lg w-72 text-left">CTF Platform</a>
+    </div>
+
+    <div class="w-full flex justify-between items-end mt-10">
+        <div class="text-xs text-gray-400 underline space-x-4">
+            <a href="/_redirect/80/scripts/" class="hover:text-blue-400">Scripts</a>
+            <a href="/_redirect/3142/" class="hover:text-blue-400">Apt-Cacher NG</a>
+            <a href="/_redirect/3000/" class="hover:text-blue-400">Status</a>
+        </div>
+        <div class="text-lg text-gray-300">
+            Countdown: <span id="countdown" class="ml-2 font-mono"></span>
+        </div>
+    </div>
+
+    <script>
+        particlesJS.load("particles-js", "assets/particlesjs-config.json", function () {
+            console.log("callback - particles.js config loaded");
+        });
+    </script>
+</body>
+
+</html>

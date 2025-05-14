@@ -4,8 +4,10 @@ set -e
 
 if ! docker image inspect "scc-bun-web-base:latest" >/dev/null 2>&1; then
     (cd ./chall/_assets/bun-web-base && ./build.sh)
-else
-    echo "Image scc-bun-web-base:latest already exists."
+fi
+
+if ! docker image inspect "scc-status-service:latest" >/dev/null 2>&1; then
+    (cd ./server/status && ./build.sh)
 fi
 
 cd ./server

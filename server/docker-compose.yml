@@ -121,12 +121,30 @@ services:
     networks:
       default:
 
+  chall_prog_6:
+    build: ../chall/prog/6
+    restart: always
+    stop_signal: SIGINT
+    ports:
+      - 8011:8011
+    networks:
+      default:
+
   chall_prog_8:
     build: ../chall/prog/8
     restart: always
     stop_signal: SIGINT
     ports:
-      - 8011:8011
+      - 8012:8012
+    networks:
+      default:
+
+  chall_prog_9:
+    build: ../chall/prog/9
+    restart: always
+    stop_signal: SIGINT
+    ports:
+      - 8013:8013
     networks:
       default:
 

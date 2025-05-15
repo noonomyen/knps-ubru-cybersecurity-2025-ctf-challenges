@@ -2,15 +2,15 @@
 
 ## 1 [Easy]
 
-`prog{175_ju57_c4111n9_17_1n_4n07h32_func710n}`
+`prog{JmK5z0h2A9J2oYpSmW91BSvc}`
 
 ## 2 [Easy]
 
-`prog{00p5_d1d_y0u_ch4n93_7h3_p455w02d_02_8234k 7h3_p20924m}`
+`prog{pv7LVJiF9ZmGlwUqDLd62BRl}`
 
 ## 3 [Easy]
 
-`prog{82u73_f02c3}`
+`prog{9sTXpOeCdOfFRTiGnSjpJekz}`
 
 ## 4 [Easy]
 
@@ -36,7 +36,7 @@ Decrypt the logs. Expose the truth. Stop BLACK SUN.
 
 Humanity is counting on you.
 
-`flag: prog{0p3r4710n_bl4ck_5un_r34dy}`
+`prog{0p3r4710n_bl4ck_5un_r34dy}`
 
 ## 6 [Medium]
 
@@ -44,13 +44,13 @@ Your teacher assigned you homework that requires connecting to a socket to solve
 
 `prog{7h15_m47h_700_f457!!@}`
 
-## 7 [Medium]
+## 7 [Hard]
 
 There is an encrypted message we want to decrypt, but it was encoded in a non-reversible way because the seed wasn't saved. We do have the source code of the program that was used for encryption, which seems to have a vulnerability. What we also know is that the encryption date was 12-13 05/2025, but we don't have the exact time. Can you help decrypt it?
 
 มีข้อความเข้ารหัสหนึ่งที่เราต้องการถอด แต่ข้อความนั้นถูกเข้ารหัสแบบย้อนกลับไม่ได้ เพราะไม่มีการเก็บ seed เอาไว้ เรามี source code โปรแกรมที่ใช้เข้ารหัส ซึ่งมันดูมีช่องโหว่อยู่ และที่เรารู้อีกอย่างคือวันที่เข้ารหัสคือ 12-13 05/2025 ซึ่งไม่มีเวลาที่แน่ชัด คุณช่วยถอดรหัสมันได้ไหม?
 
-`prog{45_71m3_9035_8y_p30p13_1n3v17481y_ch4n93}`
+`prog{2UEbqpZwaNdyzbvVvYyOULSr}`
 
 ## 8 [Hard]
 
@@ -66,7 +66,7 @@ Hello! You sent 'find', so we will randomly generate a number between 1 and 100 
 
 คุณจึงสร้าง client ด้วยภาษาอะไรก็ได้ เพื่อเรียกใช้ socket ในการตอบโต้กับ server เพื่อเอาชนะ
 
-`prog{7h475_3xc171n9}`
+`prog{aPqyYvklvtsuU9NbFav2bHCB}`
 
 ## 9 [Hard]
 
@@ -85,4 +85,4 @@ You’ve got 3 seconds per try — no retries, no mercy.
 You are not just solving a challenge.
 You are saving what’s left of the human race — one blurry text box at a time.
 
-`flag: prog{1d3n717y_v3r1f13d_y0u_4r3_hum4n!}`
+`prog{1d3n717y_v3r1f13d_y0u_4r3_hum4n!}`

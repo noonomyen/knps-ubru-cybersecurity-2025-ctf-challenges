@@ -32,7 +32,7 @@ def encode(plaintext: str, key: str):
             ciphertext.append(char)
     return "".join(ciphertext)
 
-key = "66756e6374696f6e"
+key = "4b4559"
 
-# print(encode(????, key))
-# ulbi{175_cc57_q4111a9_17_1s_4h07u32_hnvq710a}
+print(encode("????", key))
+# zvmq{NkU5d0f2K9N2mItQwA91ZCza}

@@ -20,4 +20,4 @@ for c in flag.strip():
 encrypted_hex = encrypted.encode("utf-8").hex()
 
 print(f"Encrypted: {encrypted_hex}")
-# 1530c2bc2ec2a230c2acc393c29838c29cc29e6e2101c392727ec2a5c3aa5e27c2981d4e7fc39cc3a6c3864a69c394c288c3906f484ec282c2a30ec290c3adc3aa2e06c38a
+# 1530c2bc2ec2a22ec38cc2b9c38378c29fc385c286491f04c2b6c299c38fc3a7552dc2be662dc2a3c3b5c39a0859

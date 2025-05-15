@@ -2,7 +2,7 @@ import asyncio
 import random
 
 HOST = '0.0.0.0'
-PORT = 8012
+PORT = 8011
 FLAG = "prog{7h15_m47h_700_f457!!@}"
 NUM_QUESTIONS_TO_WIN = 10
 TIME_LIMIT_PER_QUESTION = 3

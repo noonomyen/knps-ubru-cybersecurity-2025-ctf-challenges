@@ -12,7 +12,7 @@ int main() {
 
     if (strcmp(input, password) == 0) {
         printf("Access granted!\n");
-        printf("This is the flag for you: re{7h3_c47_15_5p1nn1n999999}\n");
+        printf("This is the flag for you: re{zbCMD2NqhYL2zoER47OoWhJ3}\n");
     } else {
         printf("Access denied!\n");
     }

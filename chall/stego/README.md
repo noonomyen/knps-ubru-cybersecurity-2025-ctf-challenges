@@ -45,15 +45,31 @@ flag will not use spaces. If found, replace them with an underscore (_).
 
 ## 6 [Medium]
 
-> TODO: steghide
+คนที่สร้างมันกล่าวว่า password คือสิ่งที่คุณเห็น
+
+The creator said the password is what you see.
+
+pass: `earth`
+
+steghide
+
+`stego{7h3_1m493_h45_50m37h1n9_h1dd3n}`
 
 ## 7 [Medium]
 
-> TODO: binwalk
+Some parts of it aren't referenced directly, but it's said that they can be detected using magic numbers.
+
+มีบางส่วนในนั้นที่ไม่มีการเรียกใช้ แต่ว่ากันว่าสามารถ scan เจอจาก magic number ได้?
+
+binwalk
+
+`stego{1n51d3_0f_1n51d3}`
 
 ## 8 [Hard]
 
-> TODO: images file subfix name
+`ON2GKZ3PPM2TG4LVGNXGGM35`
+
+`stego{53qu3nc3}`
 
 ## 9 [Hard]
 

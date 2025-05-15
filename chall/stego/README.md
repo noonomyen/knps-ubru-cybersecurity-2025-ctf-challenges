@@ -70,7 +70,3 @@ binwalk
 `ON2GKZ3PPM2TG4LVGNXGGM35`
 
 `stego{53qu3nc3}`
-
-## 9 [Hard]
-
-> TODO: LSB

@@ -85,4 +85,4 @@ You’ve got 3 seconds per try — no retries, no mercy.
 You are not just solving a challenge.
 You are saving what’s left of the human race — one blurry text box at a time.
 
-`prog{1d3n717y_v3r1f13d_y0u_4r3_hum4n!}`
+`prog{rPJSLZooaqaTzugrOag9uqax}`

@@ -6,7 +6,7 @@ import string
 from ascii_art import ASCII_ART, AVAILABLE_CHARS # Import จากไฟล์ ascii_art.py
 
 HOST, PORT = "0.0.0.0", 8013
-FLAG = "prog{1d3n717y_v3r1f13d_y0u_4r3_hum4n!}"
+FLAG = "prog{rPJSLZooaqaTzugrOag9uqax!}"
 CAPTCHA_LENGTH = 7
 ROUNDS_TO_WIN = 15
 TIMEOUT_SECONDS = 30.0

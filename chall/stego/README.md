@@ -61,7 +61,7 @@ rm ./image.jpg
 
 `stego{WH8mnTMV5BF4IMKSyNToVrpJ}`
 
-## 7 [Medium]
+## 7 [Hard]
 
 Some parts of it aren't referenced directly, but it's said that they can be detected using magic numbers.
 

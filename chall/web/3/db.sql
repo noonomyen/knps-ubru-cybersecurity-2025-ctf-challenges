@@ -28,6 +28,6 @@ VALUES
     (
         "admin",
         "PlYarElqC3Bo",
-        "Welcome back, admin. Here is your flag: web{w31c0m3_84ck}"
+        "Welcome back, admin. Here is your flag: web{szNIF6b68zCpInkMhaL4Swmw}"
     ),
     ("user", "LS3IHuQUua6N", "Welcome back, user.");

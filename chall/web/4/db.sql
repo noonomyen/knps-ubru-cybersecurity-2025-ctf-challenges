@@ -49,7 +49,7 @@ VALUES
     (
         "user_pak0Thah",
         "2VvP84sskiSB",
-        "Welcome back, user. Here is your flag: web{p491n4710n}"
+        "Welcome back, user. Here is your flag: web{67rFlAjZoT2ilklESiyuBmFr}"
     ),
     (
         "user_hae8Thoh",

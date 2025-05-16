@@ -12,7 +12,7 @@ Cloud ผู้ให้บริการแห่งหนึ่ง ได้�
 
 โดย flag จะถูกซ่อนใน HTML หน้าแรก
 
-`web{7h15_15_c4745720ph1c}`
+`web{yPmzsSKvucbU1b3FBxIlEZcz}`
 
 ## 2 [Easy]
 
@@ -26,7 +26,7 @@ We received intel from a spy that the website announcing this information has a 
 
 โดย flag จะถูกซ่อนใน path ที่ไม่อนุญาตหน้าแรกให้ bot เข้าถึง `robots.txt` ซึ่งจะมีไฟล์ชื่อ flag.txt
 
-`web{423_y0u_4_807}`
+`web{m2gVkbfyTFBsI9QvW2FMRl1G}`
 
 ## 3 [Easy]
 
@@ -48,7 +48,7 @@ flag จะถูกซ่อนใน column `description` ใน table `user` 
 
 ``
 
-`web{w31c0m3_84ck}`
+`web{szNIF6b68zCpInkMhaL4Swmw}`
 
 ## 4 [Medium]
 
@@ -68,7 +68,7 @@ const user = db.query(`SELECT user_id FROM user WHERE username = '${username}' A
 
 flag จะถูกซ่อนใน column `description` ใน table `user` ของ user คนหนึ่ง โดยผู้โจมตีต้องใช้ `OFFSET` ในการเลื่อนหา user ที่มี flag ใน description
 
-`web{p491n4710n}`
+`web{67rFlAjZoT2ilklESiyuBmFr}`
 
 ## 5 [Hard]
 
@@ -90,4 +90,4 @@ if (search) menu = db.query(`SELECT * FROM menu WHERE name LIKE '%${search}%'`).
 
 flag จะถูกซ่อนใน table ชื่อ `flag` ซึ่งไม่มี code ไหนเข้าถึงชื่อ table นี้ โดยผู้โจมตีต้องใช้ `union` แทรกเข้ามาใน parameter `search`
 
-`web{1f_1_134v3_17_h323_n0_0n35_90nn4_83_4813_70_74k3_17}`
+`web{IB9FW5fS1PO2b4DFkZhoDVMN}`

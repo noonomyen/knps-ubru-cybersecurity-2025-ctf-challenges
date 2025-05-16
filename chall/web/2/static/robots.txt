@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /2WVgvkUPu8ka-flag.txt
+Disallow: /h4CT36pt-flag.txt

@@ -22,7 +22,7 @@ INSERT INTO
 VALUES
     (
         "Secret",
-        "web{1f_1_134v3_17_h323_n0_0n35_90nn4_83_4813_70_74k3_17}"
+        "web{IB9FW5fS1PO2b4DFkZhoDVMN}"
     );
 
 INSERT INTO

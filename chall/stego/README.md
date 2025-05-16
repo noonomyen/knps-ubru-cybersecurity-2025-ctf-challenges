@@ -3,35 +3,35 @@
 ## 1 [Easy]
 
 ```sh
-ffmpeg -f lavfi -i color=c=black:s=1280x720:d=10 -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='stego{d154pp3423d_8u7_y0u_c4n_57111_533_m3}':fontcolor=white@0.05:x=10:y=H-th-10:fontsize=24" -c:v libx264 -t 10 stego-1.mp4
+ffmpeg -f lavfi -i color=c=black:s=1280x720:d=10 -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='stego{4YUeBJesR2ZeZc8j4PwmLenG}':fontcolor=white@0.05:x=10:y=H-th-10:fontsize=24" -c:v libx264 -t 10 stego-1.mp4
 ```
 
-`stego{d154pp3423d_8u7_y0u_c4n_57111_533_m3}`
+`stego{4YUeBJesR2ZeZc8j4PwmLenG}`
 
 ## 2 [Easy]
 
 ```sh
 ffmpeg -f lavfi -i color=c=black:s=1280x720:d=10 -c:v libx264 -t 10 stego-2.mp4
-echo "stego{c4n_y0u_23411y_d0_7h47}" >> stego-2.mp4
+echo "stego{B7dfkDqN4nRLmCinZgbd8AR7}" >> stego-2.mp4
 ```
 
-`stego{c4n_y0u_23411y_d0_7h47}`
+`stego{B7dfkDqN4nRLmCinZgbd8AR7}`
 
 ## 3 [Easy]
 
 ```sh
-ffmpeg -i ../assets/image.png -vf "drawtext=text='stego{3427h_15_50_834u71fu1}':fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:fontcolor=white@0.03:fontsize=24:x=W-tw-10:y=H-th-10" -c:v png stego-3.png
+ffmpeg -i ../assets/image.png -vf "drawtext=text='stego{UIoA7ZbpJRFXQluM3EdtXWYl}':fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:fontcolor=white@0.03:fontsize=24:x=W-tw-10:y=H-th-10" -c:v png stego-3.png
 ```
 
-`stego{3427h_15_50_834u71fu1}`
+`stego{UIoA7ZbpJRFXQluM3EdtXWYl}`
 
 ## 4 [Easy]
 
 ```sh
-exiftool -Comment="stego{m374d474}" -o stego-4.png ../assets/image.png
+exiftool -Comment="stego{VE4woGMgWfP5cAp6sQKE4vX8}" -o stego-4.png ../assets/image.png
 ```
 
-`stego{m374d474}`
+`stego{VE4woGMgWfP5cAp6sQKE4vX8}`
 
 ## 5 [Easy]
 
@@ -39,9 +39,9 @@ exiftool -Comment="stego{m374d474}" -o stego-4.png ../assets/image.png
 pdflatex ./pdf.tex
 ```
 
-flag will not use spaces. If found, replace them with an underscore (_).
+flag will not use spaces.
 
-`stego{813nd1n9_1n_huh}`
+`stego{JU1si2XO5izv6uX9sK0YThRC}`
 
 ## 6 [Medium]
 
@@ -53,7 +53,13 @@ pass: `earth`
 
 steghide
 
-`stego{7h3_1m493_h45_50m37h1n9_h1dd3n}`
+```sh
+convert ../assets/image.png image.jpg
+steghide embed -cf ./image.jpg -ef ./stego-6.txt
+rm ./image.jpg
+```
+
+`stego{WH8mnTMV5BF4IMKSyNToVrpJ}`
 
 ## 7 [Medium]
 
@@ -63,10 +69,10 @@ Some parts of it aren't referenced directly, but it's said that they can be dete
 
 binwalk
 
-`stego{1n51d3_0f_1n51d3}`
+`stego{Jcld7CQSW3kn65gaSylyTu2d}`
 
 ## 8 [Hard]
 
-`ON2GKZ3PPM2TG4LVGNXGGM35`
+`ON2GKZ3PPNQW46KLINHHASCUMRIDMODYJNLUY6S2LFVHKNTDPU`
 
-`stego{53qu3nc3}`
+`stego{anyKCNpHTdP68xKWLzZYju6c}`

@@ -2,14 +2,13 @@ import socket
 import socketserver
 import random
 import time
-import string
 from ascii_art import ASCII_ART, AVAILABLE_CHARS # Import จากไฟล์ ascii_art.py
 
 HOST, PORT = "0.0.0.0", 8013
 FLAG = "prog{rPJSLZooaqaTzugrOag9uqax}"
 CAPTCHA_LENGTH = 7
 ROUNDS_TO_WIN = 15
-TIMEOUT_SECONDS = 30.0
+TIMEOUT_SECONDS = 3.0
 
 class CaptchaHandler(socketserver.BaseRequestHandler):
     def send_line(self, message):
@@ -63,9 +62,7 @@ class CaptchaHandler(socketserver.BaseRequestHandler):
 
             self.send_line(f"Enter the {CAPTCHA_LENGTH}-character string: ")
 
-            start_time = time.time() # ไม่ได้ใช้ end_time ใน logic timeout ตรงนี้, recv_line จัดการ timeout
             user_answer = self.recv_line(timeout=TIMEOUT_SECONDS)
-            # end_time = time.time() # ถ้าจะใช้ เช็ค delta time เอง
 
             if user_answer is None:
                 self.send_line("Timeout! Too slow.")

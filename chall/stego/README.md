@@ -23,6 +23,8 @@ echo "stego{B7dfkDqN4nRLmCinZgbd8AR7}" >> stego-2.mp4
 ffmpeg -i ../assets/image.png -vf "drawtext=text='stego{UIoA7ZbpJRFXQluM3EdtXWYl}':fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:fontcolor=white@0.03:fontsize=24:x=W-tw-10:y=H-th-10" -c:v png stego-3.png
 ```
 
+Hint: `I l l`
+
 `stego{UIoA7ZbpJRFXQluM3EdtXWYl}`
 
 ## 4 [Easy]

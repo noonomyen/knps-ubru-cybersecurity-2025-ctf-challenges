@@ -68,7 +68,7 @@ URL Encoding
 
 ## 12 [Easy]
 
-Base62
+Base32
 Morse Code
 
 `crypto{Ab4RfmYxaSLgTyMjGraXSxfU}`
